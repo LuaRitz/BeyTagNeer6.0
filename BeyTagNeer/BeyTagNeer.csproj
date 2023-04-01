@@ -141,15 +141,5 @@
   <ItemGroup>
     <None Include="Resources\homeicon.png" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Control\Control.csproj">
-      <Project>{6a01ebdd-3382-4b11-be85-8a0b3b0862dc}</Project>
-      <Name>Control</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Modelo\Modelo.csproj">
-      <Project>{cbd20fb2-6a5f-4290-9acb-dae0c6da30b4}</Project>
-      <Name>Modelo</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
