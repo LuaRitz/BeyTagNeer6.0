@@ -27,7 +27,7 @@ namespace BeyTagNeer
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show.("a");
         }
 
         private void label6_Click(object sender, EventArgs e)
