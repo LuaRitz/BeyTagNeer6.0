@@ -30,7 +30,7 @@
         {
             this.Home = new System.Windows.Forms.Button();
             this.fotoptxt = new System.Windows.Forms.TextBox();
-            this.registrar = new System.Windows.Forms.Button();
+            this.registrarpd = new System.Windows.Forms.Button();
             this.nomepro = new System.Windows.Forms.TextBox();
             this.imPro = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -59,16 +59,16 @@
             this.fotoptxt.TabIndex = 38;
             this.fotoptxt.TextChanged += new System.EventHandler(this.fototxt_TextChanged);
             // 
-            // registrar
+            // registrarpd
             // 
-            this.registrar.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registrar.Location = new System.Drawing.Point(579, 366);
-            this.registrar.Name = "registrar";
-            this.registrar.Size = new System.Drawing.Size(224, 35);
-            this.registrar.TabIndex = 37;
-            this.registrar.Text = "Cadastrar";
-            this.registrar.UseVisualStyleBackColor = true;
-            this.registrar.Click += new System.EventHandler(this.registrar_Click);
+            this.registrarpd.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registrarpd.Location = new System.Drawing.Point(579, 366);
+            this.registrarpd.Name = "registrarpd";
+            this.registrarpd.Size = new System.Drawing.Size(224, 35);
+            this.registrarpd.TabIndex = 37;
+            this.registrarpd.Text = "Cadastrar";
+            this.registrarpd.UseVisualStyleBackColor = true;
+            this.registrarpd.Click += new System.EventHandler(this.registrar_Click);
             // 
             // nomepro
             // 
@@ -135,7 +135,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1283, 688);
             this.Controls.Add(this.fotoptxt);
-            this.Controls.Add(this.registrar);
+            this.Controls.Add(this.registrarpd);
             this.Controls.Add(this.nomepro);
             this.Controls.Add(this.imPro);
             this.Controls.Add(this.label9);
@@ -156,7 +156,7 @@
 
         private System.Windows.Forms.Button Home;
         private System.Windows.Forms.TextBox fotoptxt;
-        private System.Windows.Forms.Button registrar;
+        private System.Windows.Forms.Button registrarpd;
         private System.Windows.Forms.TextBox nomepro;
         private System.Windows.Forms.PictureBox imPro;
         private System.Windows.Forms.Label label9;

@@ -85,11 +85,11 @@
             // cadastropd
             // 
             this.cadastropd.BackColor = System.Drawing.Color.Black;
-            this.cadastropd.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cadastropd.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cadastropd.ForeColor = System.Drawing.Color.White;
-            this.cadastropd.Location = new System.Drawing.Point(1150, 107);
+            this.cadastropd.Location = new System.Drawing.Point(165, 32);
             this.cadastropd.Name = "cadastropd";
-            this.cadastropd.Size = new System.Drawing.Size(110, 20);
+            this.cadastropd.Size = new System.Drawing.Size(225, 64);
             this.cadastropd.TabIndex = 24;
             this.cadastropd.Text = "Cadastra/Produto";
             this.cadastropd.UseVisualStyleBackColor = false;
