@@ -16,6 +16,7 @@ namespace BeyTagNeer
         Thread T1;
         Thread T2;
         Thread T3;
+        Thread T4;
         public TelaPri()
         {
             InitializeComponent();
@@ -60,6 +61,18 @@ namespace BeyTagNeer
         private void abrirC(object obj)
         {
             Application.Run(new Carrinho());
+        }
+
+        private void cadastropd_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            T4 = new Thread(abrirCP);
+            T4.SetApartmentState(ApartmentState.STA);
+            T4.Start();
+        }
+        private void abrirCP(object obj)
+        {
+            Application.Run(new CadastroPD());
         }
     }
 }

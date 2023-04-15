@@ -94,6 +94,12 @@
     <Compile Include="Cadastro.Designer.cs">
       <DependentUpon>Cadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastroPD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroPD.Designer.cs">
+      <DependentUpon>CadastroPD.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaPri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Carrinho.resx">
       <DependentUpon>Carrinho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroPD.resx">
+      <DependentUpon>CadastroPD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaPri.resx">
       <DependentUpon>TelaPri.cs</DependentUpon>

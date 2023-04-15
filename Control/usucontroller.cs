@@ -45,21 +45,21 @@ namespace Control
 
         }
 
-        public int logar(UsuModelo us)
+        public UsuModelo logar(UsuModelo us)
             {
-                int resultado = 0;
+             
                 try
                 {
-                    string sql = "SELECT * FROM usuario where login=@login and senha=@senha";
+                    string sql = "SELECT usercode FROM usuario where login=@login and senha=@senha";
                     MySqlConnection conn = con.getConexao();
                     conn.Open();
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
                     cmd.CommandType = CommandType.Text;
                     cmd.Parameters.AddWithValue("@login", us.Login);
                     cmd.Parameters.AddWithValue("@senha", us.Senha);
-                    resultado = Convert.ToInt32(cmd.ExecuteScalar());
+                    us.codUsuario = Convert.ToInt32(cmd.ExecuteScalar());
                     conn.Close();
-                    return resultado;
+                    return us;
                 } catch (Exception ex)
                 {
                     throw new Exception(ex.Message);
