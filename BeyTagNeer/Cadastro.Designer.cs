@@ -54,9 +54,9 @@
             // 
             // lologin
             // 
-            this.lologin.Location = new System.Drawing.Point(468, 531);
+            this.lologin.Location = new System.Drawing.Point(463, 531);
             this.lologin.Name = "lologin";
-            this.lologin.Size = new System.Drawing.Size(353, 20);
+            this.lologin.Size = new System.Drawing.Size(358, 20);
             this.lologin.TabIndex = 0;
             this.lologin.TextChanged += new System.EventHandler(this.lologin_TextChanged);
             // 
@@ -64,7 +64,7 @@
             // 
             this.senhalogin.Location = new System.Drawing.Point(463, 583);
             this.senhalogin.Name = "senhalogin";
-            this.senhalogin.Size = new System.Drawing.Size(353, 20);
+            this.senhalogin.Size = new System.Drawing.Size(358, 20);
             this.senhalogin.TabIndex = 1;
             this.senhalogin.UseSystemPasswordChar = true;
             // 

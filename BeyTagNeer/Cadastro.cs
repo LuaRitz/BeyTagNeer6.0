@@ -104,7 +104,7 @@ namespace BeyTagNeer
             conexao con = new conexao();
             usM.Login= lologin.Text;
             usM.Senha=senhalogin.Text;
-            if(usC.logar(usC) == 1)
+            if(usC.logar(usM) == 1)
             {
                 MessageBox.Show("Logado");
                 this.Close(); 
