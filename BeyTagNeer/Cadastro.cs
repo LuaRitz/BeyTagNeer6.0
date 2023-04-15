@@ -27,7 +27,7 @@ namespace BeyTagNeer
 
         private void label1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show.("a");
+            MessageBox.Show("a");
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -102,6 +102,20 @@ namespace BeyTagNeer
         private void login_Click(object sender, EventArgs e)
         {
             conexao con = new conexao();
+            usM.Login= lologin.Text;
+            usM.Senha=senhalogin.Text;
+            if(usC.logar(usC) == 1)
+            {
+                MessageBox.Show("Logado");
+                this.Close(); 
+                T2 = new Thread(abrirTP);
+                T2.SetApartmentState(ApartmentState.STA);
+                T2.Start();
+            }
+            else
+            {
+                MessageBox.Show("usuário ou senha inválidos");
+            }
         }
 
         private void lologin_TextChanged(object sender, EventArgs e)

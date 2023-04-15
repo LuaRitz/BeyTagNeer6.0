@@ -49,6 +49,19 @@ namespace Control
             }
            
         }
+        public DataTable ObterDados(string sql)
+        {
+            DataTable dt = new DataTable();
+            conn = getConexao();
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = sql;
+            MySqlDataAdapter dados = new MySqlDataAdapter(cmd);
+            dados.Fill(dt);
+            conn.Close();
+            return dt;
+        }
 
         
     }
