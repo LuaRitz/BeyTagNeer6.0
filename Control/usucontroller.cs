@@ -13,6 +13,7 @@ namespace Control
 {
     public class usucontroller : UsuModelo
     {
+       
 
         conexao con = new conexao();
         public usucontroller()

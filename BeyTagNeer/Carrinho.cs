@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Control;
+using Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,8 @@ namespace BeyTagNeer
     {
         Thread T2;
         Thread T3;
+        UsuModelo usM = new UsuModelo();
+        usucontroller usC = new usucontroller();
         public Carrinho()
         {
             InitializeComponent();
@@ -34,7 +38,7 @@ namespace BeyTagNeer
         }
         private void abrirTP(object obj)
         {
-            Application.Run(new TelaPri());
+            Application.Run(new TelaPri(usM));
         }
 
         private void button1_Click(object sender, EventArgs e)

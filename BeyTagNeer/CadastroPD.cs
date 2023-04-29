@@ -33,7 +33,7 @@ namespace BeyTagNeer
         }
         private void abrirTP(object obj)
         {
-            Application.Run(new TelaPri());
+            Application.Run(new TelaPri(usM));
         }
 
         private void label2_Click(object sender, EventArgs e)

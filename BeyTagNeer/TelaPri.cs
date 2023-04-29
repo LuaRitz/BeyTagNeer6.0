@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using Control;
+using Modelo;
 
 namespace BeyTagNeer
 {
@@ -17,14 +19,17 @@ namespace BeyTagNeer
         Thread T2;
         Thread T3;
         Thread T4;
-        public TelaPri()
+        UsuModelo usM = new UsuModelo();
+        usucontroller usC = new usucontroller();
+        public TelaPri(UsuModelo us)
         {
+            usM = us;
             InitializeComponent();
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            label1.Text = usM.codUsuario.ToString();
         }
 
         private void Login_Click(object sender, EventArgs e)
@@ -48,7 +53,7 @@ namespace BeyTagNeer
         }
         private void abrirTP(object obj)
         {
-            Application.Run(new TelaPri());
+            Application.Run(new TelaPri(usM));
         }
 
         private void carrinho_Click(object sender, EventArgs e)
@@ -73,6 +78,11 @@ namespace BeyTagNeer
         private void abrirCP(object obj)
         {
             Application.Run(new CadastroPD());
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

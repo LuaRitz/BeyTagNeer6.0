@@ -111,7 +111,7 @@ namespace BeyTagNeer
                 this.Close(); 
                 T2 = new Thread(abrirTP);
                 T2.SetApartmentState(ApartmentState.STA);
-                T2.Start();
+                T2.Start(usM);
             }
             else
             {
@@ -138,7 +138,7 @@ namespace BeyTagNeer
         }
         private void abrirTP(object obj)
         {
-            Application.Run(new TelaPri());
+            Application.Run(new TelaPri(usM));
         }
     }
 }

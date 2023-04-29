@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,10 @@ namespace BeyTagNeer
         [STAThread]
         static void Main()
         {
+            UsuModelo us = new UsuModelo();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TelaPri());
+            Application.Run(new TelaPri(us));
         }
     }
 }

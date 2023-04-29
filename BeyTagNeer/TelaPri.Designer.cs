@@ -34,6 +34,7 @@
             this.carrinho = new System.Windows.Forms.Button();
             this.Home = new System.Windows.Forms.Button();
             this.cadastropd = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,6 +96,16 @@
             this.cadastropd.UseVisualStyleBackColor = false;
             this.cadastropd.Click += new System.EventHandler(this.cadastropd_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1065, 180);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "label1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // TelaPri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,6 +113,7 @@
             this.BackgroundImage = global::BeyTagNeer.Properties.Resources.TelaPri;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1283, 688);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cadastropd);
             this.Controls.Add(this.Home);
             this.Controls.Add(this.carrinho);
@@ -114,6 +126,7 @@
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -124,5 +137,6 @@
         private System.Windows.Forms.Button carrinho;
         private System.Windows.Forms.Button Home;
         private System.Windows.Forms.Button cadastropd;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -16,6 +16,7 @@ namespace Modelo
         private string email;
         private string imagem;
         private string login;
+       
 
         public UsuModelo()
         {
@@ -24,7 +25,7 @@ namespace Modelo
             codigoperfil = 0;
             usuario = "";
             senha = "";
-
+            
         }
         
         public int codUsuario{
