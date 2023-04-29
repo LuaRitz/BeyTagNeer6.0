@@ -19,7 +19,7 @@ namespace BeyTagNeer
         Thread T2;
         UsuModelo usM = new UsuModelo();
         usucontroller usC = new usucontroller();
-        public CadastroPD()
+        public CadastroPD(UsuModelo us)
         {
             InitializeComponent();
         }

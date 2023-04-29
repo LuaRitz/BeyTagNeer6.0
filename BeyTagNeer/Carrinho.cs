@@ -19,15 +19,15 @@ namespace BeyTagNeer
         Thread T3;
         UsuModelo usM = new UsuModelo();
         usucontroller usC = new usucontroller();
-        public Carrinho()
+        public Carrinho(UsuModelo us)
         {
+            usM= us;
             InitializeComponent();
         }
 
         private void Carrinho_Load(object sender, EventArgs e)
         {
-           
-        }
+            MessageBox.Show(usM.codUsuario.ToString());        }
 
         private void Home_Click(object sender, EventArgs e)
         {
@@ -50,7 +50,7 @@ namespace BeyTagNeer
         }
         private void abrirC(object obj)
         {
-            Application.Run(new Carrinho());
+            Application.Run(new Carrinho(usM));
         }
     }
 }

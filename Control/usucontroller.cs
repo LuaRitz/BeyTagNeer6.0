@@ -28,7 +28,6 @@ namespace Control
                 string SQL = "INSERT INTO usuario(nome,email,login,senha,userimage)" + "values(@nome,@email,@login,@senha,@userimage)";
                 string[] campos = { "@nome", "@email", "@login", "@senha", "@userimage" };
                 string[] valores = { modelo.NomeUsu, modelo.Email, modelo.Login, modelo.Senha, modelo.Imagem };
-
                 if (con.cadastrar(campos, valores, SQL) >= 1)
                 {
                     ValorCadastro = 1;
@@ -48,28 +47,21 @@ namespace Control
 
         public UsuModelo logar(UsuModelo us)
             {
-             
                 try
                 {
-
-                    string sql = "SELECT usercode,perfil FROM usuario where login=@login and senha=@senha";
-                    
+                    string sql = "SELECT usercode,perfil FROM usuario where login=@login and senha=@senha"; 
                     MySqlConnection conn = con.getConexao();
                     conn.Open();
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
-                    
                     cmd.CommandType = CommandType.Text;
                     cmd.Parameters.AddWithValue("@login", us.Login);
                     cmd.Parameters.AddWithValue("@senha", us.Senha);
                     MySqlDataReader reader = cmd.ExecuteReader();
                     reader.Read();
-                    
-                   us.codUsuario = Convert.ToInt32(reader["usercode"]);
-                   us.perfil = Convert.ToInt32(reader["perfil"]);
-               
-                    
-                reader.Close();
-                conn.Close();
+                    us.codUsuario = Convert.ToInt32(reader["usercode"]);
+                    us.perfil = Convert.ToInt32(reader["perfil"]);
+                    reader.Close();
+                    conn.Close();
                     return us;
                 } catch (Exception ex)
                 {

@@ -34,7 +34,6 @@ namespace BeyTagNeer
             label1.Text = usM.perfil.ToString();
             if (usM.perfil == 2 || usM.perfil == 1)
             {
-
                cadastrpd.Visible = true;
             }
         }
@@ -72,7 +71,7 @@ namespace BeyTagNeer
         }
         private void abrirC(object obj)
         {
-            Application.Run(new Carrinho());
+            Application.Run(new Carrinho(usM));
         }
 
         private void cadastropd_Click(object sender, EventArgs e)
@@ -84,7 +83,7 @@ namespace BeyTagNeer
         }
         private void abrirCP(object obj)
         {
-            Application.Run(new CadastroPD());
+            Application.Run(new CadastroPD(usM));
         }
 
         private void label1_Click(object sender, EventArgs e)
