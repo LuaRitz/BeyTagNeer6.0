@@ -51,19 +51,29 @@ namespace Control
              
                 try
                 {
-                    string sql = "SELECT usercode FROM usuario where login=@login and senha=@senha";
+
+                    string sql = "SELECT usercode,perfil FROM usuario where login=@login and senha=@senha";
+                    
                     MySqlConnection conn = con.getConexao();
                     conn.Open();
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    
                     cmd.CommandType = CommandType.Text;
                     cmd.Parameters.AddWithValue("@login", us.Login);
                     cmd.Parameters.AddWithValue("@senha", us.Senha);
-                    us.codUsuario = Convert.ToInt32(cmd.ExecuteScalar());
-                    conn.Close();
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    reader.Read();
+                    
+                   us.codUsuario = Convert.ToInt32(reader["usercode"]);
+                   us.perfil = Convert.ToInt32(reader["perfil"]);
+               
+                    
+                reader.Close();
+                conn.Close();
                     return us;
                 } catch (Exception ex)
                 {
-                    throw new Exception(ex.Message);
+                    throw new Exception(ex.Message);        
                 }
         }
     }

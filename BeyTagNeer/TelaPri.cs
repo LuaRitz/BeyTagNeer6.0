@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Threading;
 using Control;
 using Modelo;
+using MySql.Data.MySqlClient;
 
 namespace BeyTagNeer
 {
@@ -26,10 +27,16 @@ namespace BeyTagNeer
             usM = us;
             InitializeComponent();
         }
+        
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            label1.Text = usM.codUsuario.ToString();
+            label1.Text = usM.perfil.ToString();
+            if (usM.perfil == 2 || usM.perfil == 1)
+            {
+
+               cadastrpd.Visible = true;
+            }
         }
 
         private void Login_Click(object sender, EventArgs e)

@@ -33,7 +33,7 @@
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.carrinho = new System.Windows.Forms.Button();
             this.Home = new System.Windows.Forms.Button();
-            this.cadastropd = new System.Windows.Forms.Button();
+            this.cadastrpd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -83,18 +83,19 @@
             this.Home.UseVisualStyleBackColor = true;
             this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
-            // cadastropd
+            // cadastrpd
             // 
-            this.cadastropd.BackColor = System.Drawing.Color.Black;
-            this.cadastropd.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cadastropd.ForeColor = System.Drawing.Color.White;
-            this.cadastropd.Location = new System.Drawing.Point(165, 32);
-            this.cadastropd.Name = "cadastropd";
-            this.cadastropd.Size = new System.Drawing.Size(225, 64);
-            this.cadastropd.TabIndex = 24;
-            this.cadastropd.Text = "Cadastra/Produto";
-            this.cadastropd.UseVisualStyleBackColor = false;
-            this.cadastropd.Click += new System.EventHandler(this.cadastropd_Click);
+            this.cadastrpd.BackColor = System.Drawing.Color.Black;
+            this.cadastrpd.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cadastrpd.ForeColor = System.Drawing.Color.White;
+            this.cadastrpd.Location = new System.Drawing.Point(165, 32);
+            this.cadastrpd.Name = "cadastrpd";
+            this.cadastrpd.Size = new System.Drawing.Size(225, 64);
+            this.cadastrpd.TabIndex = 24;
+            this.cadastrpd.Text = "Cadastra/Produto";
+            this.cadastrpd.UseVisualStyleBackColor = false;
+            this.cadastrpd.Visible = false;
+            this.cadastrpd.Click += new System.EventHandler(this.cadastropd_Click);
             // 
             // label1
             // 
@@ -114,7 +115,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1283, 688);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cadastropd);
+            this.Controls.Add(this.cadastrpd);
             this.Controls.Add(this.Home);
             this.Controls.Add(this.carrinho);
             this.Controls.Add(this.pictureBox);
@@ -136,7 +137,7 @@
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Button carrinho;
         private System.Windows.Forms.Button Home;
-        private System.Windows.Forms.Button cadastropd;
+        private System.Windows.Forms.Button cadastrpd;
         private System.Windows.Forms.Label label1;
     }
 }

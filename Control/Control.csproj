@@ -82,9 +82,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="consulta dados.cs" />
     <Compile Include="conexao.cs" />
-    <Compile Include="logincontroller.cs" />
     <Compile Include="usucontroller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
