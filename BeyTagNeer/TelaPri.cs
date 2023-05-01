@@ -31,11 +31,16 @@ namespace BeyTagNeer
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            label1.Text = usM.perfil.ToString();
-            if (usM.perfil == 2 || usM.perfil == 1)
+            label1.Text = usM.Usuario.ToString();
+            if (usM.perfil == 2)
             {
                cadastrpd.Visible = true;
             }
+            if (usM.perfil > 0)
+            {
+                Login.Visible = false;
+            }
+
         }
 
         private void Login_Click(object sender, EventArgs e)

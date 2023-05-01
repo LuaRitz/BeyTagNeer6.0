@@ -21,6 +21,7 @@ namespace BeyTagNeer
         usucontroller usC = new usucontroller();
         public CadastroPD(UsuModelo us)
         {
+            usM = us;
             InitializeComponent();
         }
 

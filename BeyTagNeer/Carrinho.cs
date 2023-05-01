@@ -27,7 +27,8 @@ namespace BeyTagNeer
 
         private void Carrinho_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(usM.codUsuario.ToString());        }
+            //MessageBox.Show(usM.codUsuario.ToString());
+        }
 
         private void Home_Click(object sender, EventArgs e)
         {
