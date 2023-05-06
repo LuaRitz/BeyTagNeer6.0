@@ -34,9 +34,11 @@
             this.nomepro = new System.Windows.Forms.TextBox();
             this.imPro = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.codp = new System.Windows.Forms.TextBox();
+            this.stock = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.preco = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.imPro)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +64,7 @@
             // registrarpd
             // 
             this.registrarpd.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registrarpd.Location = new System.Drawing.Point(579, 366);
+            this.registrarpd.Location = new System.Drawing.Point(591, 428);
             this.registrarpd.Name = "registrarpd";
             this.registrarpd.Size = new System.Drawing.Size(224, 35);
             this.registrarpd.TabIndex = 37;
@@ -98,13 +100,13 @@
             this.label9.Text = "Nome do Produto";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // codp
+            // stock
             // 
-            this.codp.Location = new System.Drawing.Point(545, 260);
-            this.codp.Name = "codp";
-            this.codp.Size = new System.Drawing.Size(364, 20);
-            this.codp.TabIndex = 27;
-            this.codp.TextChanged += new System.EventHandler(this.usucad_TextChanged);
+            this.stock.Location = new System.Drawing.Point(545, 260);
+            this.stock.Name = "stock";
+            this.stock.Size = new System.Drawing.Size(364, 20);
+            this.stock.TabIndex = 27;
+            this.stock.TextChanged += new System.EventHandler(this.usucad_TextChanged);
             // 
             // label5
             // 
@@ -127,6 +129,22 @@
             this.label2.Text = "Cadastro Produto";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(542, 322);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "preço";
+            // 
+            // preco
+            // 
+            this.preco.Location = new System.Drawing.Point(545, 338);
+            this.preco.Name = "preco";
+            this.preco.Size = new System.Drawing.Size(364, 20);
+            this.preco.TabIndex = 40;
+            // 
             // CadastroPD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -134,12 +152,14 @@
             this.BackgroundImage = global::BeyTagNeer.Properties.Resources.TelaPri;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1283, 688);
+            this.Controls.Add(this.preco);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.fotoptxt);
             this.Controls.Add(this.registrarpd);
             this.Controls.Add(this.nomepro);
             this.Controls.Add(this.imPro);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.codp);
+            this.Controls.Add(this.stock);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Home);
@@ -160,8 +180,10 @@
         private System.Windows.Forms.TextBox nomepro;
         private System.Windows.Forms.PictureBox imPro;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox codp;
+        private System.Windows.Forms.TextBox stock;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox preco;
     }
 }
