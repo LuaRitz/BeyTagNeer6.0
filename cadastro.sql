@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 25-Fev-2023 às 19:05
--- Versão do servidor: 10.4.19-MariaDB
--- versão do PHP: 8.0.6
+-- Generation Time: 06-Maio-2023 às 14:46
+-- Versão do servidor: 10.1.32-MariaDB
+-- PHP Version: 7.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,8 +19,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `cadastro`
+-- Database: `cadastro`
 --
+CREATE DATABASE IF NOT EXISTS `cadastro` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `cadastro`;
 
 -- --------------------------------------------------------
 
@@ -27,6 +30,7 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `carrinhocompras`
 --
 
+DROP TABLE IF EXISTS `carrinhocompras`;
 CREATE TABLE `carrinhocompras` (
   `carrinho` int(8) NOT NULL,
   `nproduto` int(2) NOT NULL,
@@ -40,10 +44,13 @@ CREATE TABLE `carrinhocompras` (
 -- Estrutura da tabela `produtos`
 --
 
+DROP TABLE IF EXISTS `produtos`;
 CREATE TABLE `produtos` (
   `produto` int(2) NOT NULL,
   `nomeproduto` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `imagem` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL
+  `imagem` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Stock` int(11) NOT NULL,
+  `preco` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -52,6 +59,7 @@ CREATE TABLE `produtos` (
 -- Estrutura da tabela `usuario`
 --
 
+DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
   `usercode` int(8) NOT NULL,
   `nome` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -72,33 +80,33 @@ INSERT INTO `usuario` (`usercode`, `nome`, `email`, `login`, `senha`, `ncarrinho
 (2, 'fasd', 'dsa', 'asd', '123', NULL, 0, NULL);
 
 --
--- Índices para tabelas despejadas
+-- Indexes for dumped tables
 --
 
 --
--- Índices para tabela `carrinhocompras`
+-- Indexes for table `carrinhocompras`
 --
 ALTER TABLE `carrinhocompras`
   ADD PRIMARY KEY (`carrinho`);
 
 --
--- Índices para tabela `usuario`
+-- Indexes for table `usuario`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`usercode`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `carrinhocompras`
+-- AUTO_INCREMENT for table `carrinhocompras`
 --
 ALTER TABLE `carrinhocompras`
   MODIFY `carrinho` int(8) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de tabela `usuario`
+-- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
   MODIFY `usercode` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
