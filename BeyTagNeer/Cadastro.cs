@@ -85,7 +85,7 @@ namespace BeyTagNeer
             try
             {
                 OpenFileDialog open = new OpenFileDialog();
-                open.Filter = "imagem file | *.png; *.jpg: *.bmp";
+                open.Filter = "image file (*.jpg;*.png) | *.png; *.jpg;";
                 if (open.ShowDialog() == DialogResult.OK)
                 {
                     fototxt.Text = open.FileName;
