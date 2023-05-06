@@ -11,7 +11,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-
+using System.IO;
 
 namespace BeyTagNeer
 {
@@ -86,12 +86,13 @@ namespace BeyTagNeer
             {
                 OpenFileDialog open = new OpenFileDialog();
                 open.Filter = "image file (*.jpg;*.png) | *.png; *.jpg;";
+                string caminhofoto = "//Fotos/";
                 if (open.ShowDialog() == DialogResult.OK)
                 {
                     fototxt.Text = open.FileName;
                     pictureBox1.Image = Image.FromFile(open.FileName);
                 }
-
+                File.Copy(fototxt.Text, caminhofoto);
             }
             catch(Exception ex)
             {
