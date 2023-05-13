@@ -46,6 +46,7 @@ namespace BeyTagNeer
 
         private void registrar_Click(object sender, EventArgs e)
         {
+            
             conexao con = new conexao();
             if (stock.Text == "")
             {
@@ -65,9 +66,10 @@ namespace BeyTagNeer
             }
             else
             {
+                string.Format("{0:C}", Convert.ToDecimal(preco.Text.Replace(".", ",")));
                 pMod.Stock = Convert.ToInt32(stock.Text);
                 pMod.NomePro = nomepro.Text;
-                pMod.Preco = Convert.ToDouble(preco.Text);
+                pMod.Preco = preco.Text;
                 pMod.Imagem = fotoptxt.Text;
                 if (usC.cadastrarP(pMod) == 1)
                 {
