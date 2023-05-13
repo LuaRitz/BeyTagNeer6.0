@@ -86,7 +86,7 @@ namespace BeyTagNeer
             {
                 OpenFileDialog open = new OpenFileDialog();
                 open.Filter = "image file (*.jpg;*.png) | *.png; *.jpg;";
-                string caminhofoto = @"C://Fotos";
+                string caminhofoto = @"/Fotos";
                 if (open.ShowDialog() == DialogResult.OK)
                 {
                     fototxt.Text = open.FileName;

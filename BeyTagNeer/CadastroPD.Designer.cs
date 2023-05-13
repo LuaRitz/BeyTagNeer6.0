@@ -113,9 +113,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(542, 244);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.Size = new System.Drawing.Size(62, 13);
             this.label5.TabIndex = 26;
-            this.label5.Text = "Produto";
+            this.label5.Text = "Quantidade";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label2

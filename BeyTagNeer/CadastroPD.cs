@@ -54,7 +54,21 @@ namespace BeyTagNeer
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                OpenFileDialog oppro = new OpenFileDialog();
+                oppro.Filter = "image file (*.jpg;*.png) | *.png; *.jpg;";
+                if (oppro.ShowDialog() == DialogResult.OK)
+                {
+                    fotoptxt.Text = oppro.FileName;
+                    imPro.Image = Image.FromFile(oppro.FileName);
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha" + ex.Message);
+            }
         }
 
         private void label9_Click(object sender, EventArgs e)
