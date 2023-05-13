@@ -45,6 +45,31 @@ namespace Control
 
         }
 
+        public int cadastrarP(ProModelo modelo)
+        {
+            int ValorCadastro = -1;
+            try
+            {
+                string SQL = "INSERT INTO produto(nomeproduto,imagem,Stock,preco)" + "values(@nomeproduto,@imagem,@Stock,@preco)";
+                string[] campos = { "@nomeproduto", "@imagem", "@Stock", "@preco" };
+                string[] valores = { modelo.NomePro, modelo.Imagem, Convert.ToString(modelo.Stock), Convert.ToString(modelo.Preco) };
+                if (con.cadastrar(campos, valores, SQL) >= 1)
+                {
+                    ValorCadastro = 1;
+                }
+                else
+                {
+                    ValorCadastro = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return ValorCadastro;
+
+        }
+
         public UsuModelo logar(UsuModelo us)
             {
                 try

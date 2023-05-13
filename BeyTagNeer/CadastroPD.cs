@@ -59,17 +59,17 @@ namespace BeyTagNeer
             {
                 MessageBox.Show("insira o preço!");
             }
-            //else if (imPro.Text == "")
-            //{
-            //    MessageBox.Show("Coloque a Imagem!");
-            //}
+            else if (imPro.Text == "")
+            {
+                MessageBox.Show("Coloque a Imagem!");
+            }
             else
             {
                 pMod.Stock = Convert.ToInt32(stock.Text);
                 pMod.NomePro = nomepro.Text;
                 pMod.Preco = Convert.ToDouble(preco.Text);
                 pMod.Imagem = fotoptxt.Text;
-                if (usC.cadastrar(usM) == 1)
+                if (usC.cadastrarP(pMod) == 1)
                 {
                     MessageBox.Show("sucesso");
                 }
