@@ -108,7 +108,6 @@ namespace BeyTagNeer
             usM=usC.logar(usM);
             if(usM.codUsuario != 0)
             {
-                MessageBox.Show("Logado");
                 this.Close(); 
                 T2 = new Thread(abrirTP);
                 T2.SetApartmentState(ApartmentState.STA);
