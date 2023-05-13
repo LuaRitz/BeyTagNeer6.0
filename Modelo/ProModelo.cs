@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    internal class ProModelo
+    public class ProModelo
     {
         private int codigoproduto;
         private string nomeproduto;
@@ -39,10 +39,10 @@ namespace Modelo
             get { return stock; }
             set { stock = value; }
         }
-        public float Preco
+        public double Preco
         {
             get { return preco; }
-            set { preco = value; }
+            set { preco = (float)value; }
         }
         public string Imagem
         {

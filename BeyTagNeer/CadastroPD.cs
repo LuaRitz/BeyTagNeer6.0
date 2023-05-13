@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace BeyTagNeer
 {
@@ -17,6 +18,7 @@ namespace BeyTagNeer
 
     {
         Thread T2;
+        ProModelo pMod = new ProModelo();
         UsuModelo usM = new UsuModelo();
         usucontroller usC = new usucontroller();
         public CadastroPD(UsuModelo us)
@@ -44,6 +46,39 @@ namespace BeyTagNeer
 
         private void registrar_Click(object sender, EventArgs e)
         {
+            conexao con = new conexao();
+            if (stock.Text == "")
+            {
+                MessageBox.Show("Preencha a quantidade de Estoque!");
+            }
+            else if (nomepro.Text == "")
+            {
+                MessageBox.Show("De o nome do produto!");
+            }
+            else if (preco.Text == "")
+            {
+                MessageBox.Show("insira o preço!");
+            }
+            //else if (imPro.Text == "")
+            //{
+            //    MessageBox.Show("Coloque a Imagem!");
+            //}
+            else
+            {
+                pMod.Stock = Convert.ToInt32(stock.Text);
+                pMod.NomePro = nomepro.Text;
+                pMod.Preco = Convert.ToDouble(preco.Text);
+                pMod.Imagem = fotoptxt.Text;
+                if (usC.cadastrar(usM) == 1)
+                {
+                    MessageBox.Show("sucesso");
+                }
+                else
+                {
+                    MessageBox.Show("Falha");
+                }
+            }
+
 
         }
 
