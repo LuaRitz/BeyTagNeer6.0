@@ -50,7 +50,7 @@ namespace Control
             int ValorCadastro = -1;
             try
             {
-                string SQL = "INSERT INTO produto(nomeproduto,imagem,Stock,preco)" + "values(@nomeproduto,@imagem,@Stock,@preco)";
+                string SQL = "INSERT INTO produtos(nomeproduto,imagem,Stock,preco)" + "values(@nomeproduto,@imagem,@Stock,@preco)";
                 string[] campos = { "@nomeproduto", "@imagem", "@Stock", "@preco" };
                 string[] valores = { modelo.NomePro, modelo.Imagem, Convert.ToString(modelo.Stock), Convert.ToString(modelo.Preco) };
                 if (con.cadastrar(campos, valores, SQL) >= 1)

@@ -59,7 +59,7 @@ namespace BeyTagNeer
             {
                 MessageBox.Show("insira o preço!");
             }
-            else if (imPro.Text == "")
+            else if (fotoptxt.Text == "")
             {
                 MessageBox.Show("Coloque a Imagem!");
             }
