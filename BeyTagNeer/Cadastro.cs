@@ -86,13 +86,13 @@ namespace BeyTagNeer
             {
                 OpenFileDialog open = new OpenFileDialog();
                 open.Filter = "image file (*.jpg;*.png) | *.png; *.jpg;";
-                string caminhofoto = "//Fotos/";
+                string caminhofoto = @"C://Fotos";
                 if (open.ShowDialog() == DialogResult.OK)
                 {
                     fototxt.Text = open.FileName;
                     pictureBox1.Image = Image.FromFile(open.FileName);
                 }
-                File.Copy(fototxt.Text, caminhofoto);
+                File.Copy(open.FileName, caminhofoto);
             }
             catch(Exception ex)
             {
