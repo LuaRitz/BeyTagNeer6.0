@@ -55,7 +55,7 @@ namespace BeyTagNeer
                 usP.codProduto = i;
                 usP.codProduto++;
                 DataRow row = produto.Rows[i];
-                MessageBox.Show(row["nomeproduto"].ToString());
+                //MessageBox.Show(row["nomeproduto"].ToString());
                 Label nomeprod = new Label();
                 nomeprod.Name = "txtnome";
                 nomeprod.Location = new Point(25, 195);
@@ -76,7 +76,11 @@ namespace BeyTagNeer
                 layout.Controls.Add(preco);
                 layout.Controls.Add(foto);
                 x += 215;
-                
+                if (i % 4 == 0 && i != 0)
+                {
+                    y += 290;
+                    x = 0;
+                }
                 panel1.Controls.Add(layout);
             }
 

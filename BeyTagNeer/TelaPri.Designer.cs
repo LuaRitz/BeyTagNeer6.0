@@ -111,7 +111,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(960, 139);
+            this.button1.Location = new System.Drawing.Point(1196, 139);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 26;
@@ -121,9 +121,10 @@
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
             this.panel1.Location = new System.Drawing.Point(252, 139);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(702, 521);
+            this.panel1.Size = new System.Drawing.Size(807, 521);
             this.panel1.TabIndex = 27;
             // 
             // TelaPri
