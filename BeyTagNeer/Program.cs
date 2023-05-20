@@ -18,7 +18,7 @@ namespace BeyTagNeer
             UsuModelo us = new UsuModelo();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new TelaPri(us));
         }
     }
 }

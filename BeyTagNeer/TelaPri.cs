@@ -20,6 +20,7 @@ namespace BeyTagNeer
         Thread T2;
         Thread T3;
         Thread T4;
+        Thread T5;
         UsuModelo usM = new UsuModelo();
         usucontroller usC = new usucontroller();
         public TelaPri(UsuModelo us)
@@ -94,6 +95,19 @@ namespace BeyTagNeer
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void abrirf1(object obj)
+        {
+            Application.Run(new Form1());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            T5 = new Thread(abrirf1);
+            T5.SetApartmentState(ApartmentState.STA);
+            T5.Start();
         }
     }
 }

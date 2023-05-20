@@ -35,7 +35,7 @@ namespace BeyTagNeer
 
             Label nomeprod = new Label();
             nomeprod.Name = "txtnome";
-            nomeprod.Location = new Point(185);
+            nomeprod.Location = new Point(35,185);
 
 
             panel1.Controls.Add(nomeprod);
