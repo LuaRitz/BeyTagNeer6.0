@@ -41,7 +41,7 @@
             this.panel1.Controls.Add(this.comprar);
             this.panel1.Controls.Add(this.preco);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(135, 108);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(544, 592);
             this.panel1.TabIndex = 0;
@@ -70,7 +70,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(257, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(209, 179);
             this.pictureBox1.TabIndex = 0;
