@@ -76,7 +76,8 @@ namespace BeyTagNeer
                 layout.Controls.Add(preco);
                 layout.Controls.Add(foto);
                 x += 215;
-                if (i % 4 == 0 && i != 0)
+                int o = i + 1;
+                if (o % 4 == 0 && o != 0)
                 {
                     y += 290;
                     x = 0;
