@@ -40,15 +40,22 @@ namespace BeyTagNeer
                 MessageBox.Show(row["nomeproduto"].ToString());
                 Label nomeprod = new Label();
                 nomeprod.Name = "txtnome";
-                nomeprod.Location = new Point(35, 185);
+                nomeprod.Location = new Point(25, 195);
                 nomeprod.Text = row["nomeproduto"].ToString();
                 Label preco = new Label();
                 preco.Name = "txtpreco";
-                preco.Location = new Point(65, 225);
+                preco.Location = new Point(150, 210);
                 preco.Text = row["preco"].ToString();
+                PictureBox foto = new PictureBox();
+                foto.Name = "txtfoto";
+                foto.SizeMode= PictureBoxSizeMode.StretchImage;
+                foto.Size = new Size(210, 190);
+                foto.Location = new Point(0, 0);
+                foto.ImageLocation = row["imagem"].ToString();
 
                 panel1.Controls.Add(nomeprod);
                 panel1.Controls.Add(preco);
+                panel1.Controls.Add(foto);
             }
 
             
