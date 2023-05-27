@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 20-Maio-2023 às 20:22
--- Versão do servidor: 10.1.32-MariaDB
--- PHP Version: 7.0.30
+-- Tempo de geração: 27-Maio-2023 às 16:47
+-- Versão do servidor: 10.4.19-MariaDB
+-- versão do PHP: 8.0.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cadastro`
+-- Banco de dados: `cadastro`
 --
 CREATE DATABASE IF NOT EXISTS `cadastro` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `cadastro`;
@@ -33,7 +32,7 @@ USE `cadastro`;
 DROP TABLE IF EXISTS `carrinhocompras`;
 CREATE TABLE `carrinhocompras` (
   `carrinho` int(8) NOT NULL,
-  `nproduto` int(2) NOT NULL,
+  `data` datetime NOT NULL,
   `uscode` int(8) NOT NULL,
   `cep` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -101,45 +100,45 @@ INSERT INTO `usuario` (`usercode`, `nome`, `email`, `login`, `senha`, `ncarrinho
 (2, 'fasd', 'dsa', 'asd', '123', NULL, 0, NULL);
 
 --
--- Indexes for dumped tables
+-- Índices para tabelas despejadas
 --
 
 --
--- Indexes for table `carrinhocompras`
+-- Índices para tabela `carrinhocompras`
 --
 ALTER TABLE `carrinhocompras`
   ADD PRIMARY KEY (`carrinho`);
 
 --
--- Indexes for table `produtos`
+-- Índices para tabela `produtos`
 --
 ALTER TABLE `produtos`
   ADD PRIMARY KEY (`produto`);
 
 --
--- Indexes for table `usuario`
+-- Índices para tabela `usuario`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`usercode`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
--- AUTO_INCREMENT for table `carrinhocompras`
+-- AUTO_INCREMENT de tabela `carrinhocompras`
 --
 ALTER TABLE `carrinhocompras`
   MODIFY `carrinho` int(8) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `produtos`
+-- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
   MODIFY `produto` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `usuario`
+-- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
   MODIFY `usercode` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
