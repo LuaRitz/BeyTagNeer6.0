@@ -121,7 +121,7 @@ namespace BeyTagNeer
         }
         private void abrirC(object obj)
         {
-            Application.Run(new Carrinho(usM, caMod));
+            Application.Run(new Carrinho(usM));
         }
 
         private void cadastropd_Click(object sender, EventArgs e)

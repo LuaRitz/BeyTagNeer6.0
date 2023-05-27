@@ -20,11 +20,10 @@ namespace BeyTagNeer
         UsuModelo usM = new UsuModelo();
         usucontroller usC = new usucontroller();
         CarrinhoModelo caMod = new CarrinhoModelo();
-        public Carrinho(UsuModelo us, CarrinhoModelo caMod)
+        public Carrinho(UsuModelo us)
         {
             usM = us;
             InitializeComponent();
-            this.caMod = caMod;
         }
 
         private void Carrinho_Load(object sender, EventArgs e)
@@ -53,7 +52,7 @@ namespace BeyTagNeer
         }
         private void abrirC(object obj)
         {
-            Application.Run(new Carrinho(usM, caMod));
+            Application.Run(new Carrinho(usM));
         }
     }
 }
