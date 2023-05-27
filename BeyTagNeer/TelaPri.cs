@@ -71,11 +71,17 @@ namespace BeyTagNeer
                 foto.Size = new Size(210, 190);
                 foto.Location = new Point(0, 0);
                 foto.ImageLocation = row["imagem"].ToString();
+                Button comprar = new Button();
+                comprar.Location = new Point(5, 255);
+                comprar.Size = new Size(200, 25);
+                comprar.Text = "Comprar";
+                comprar.Click += new EventHandler((sender1, e1) => RegistrarClick(sender1, e1, usP.codProduto.ToString()));
 
                 layout.Location=new Point(x, y);
                 layout.Controls.Add(nomeprod);
                 layout.Controls.Add(preco);
                 layout.Controls.Add(foto);
+                layout.Controls.Add(comprar);
                 x += 215;
                 int o = i + 1;
                 if (o % 4 == 0 && o != 0)
@@ -86,6 +92,18 @@ namespace BeyTagNeer
                 panel1.Controls.Add(layout);
             }
 
+        }
+        private void RegistrarClick(object sender, EventArgs e, string id)
+        {
+            ball(id);
+        }
+
+        private void ball(string id)
+        {
+            this.Close();
+            T3 = new Thread(abrirC);
+            T3.SetApartmentState(ApartmentState.STA);
+            T3.Start();
         }
 
         private void Login_Click(object sender, EventArgs e)
