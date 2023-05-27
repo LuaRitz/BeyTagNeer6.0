@@ -93,5 +93,25 @@ namespace Control
                     throw new Exception(ex.Message);        
                 }
         }
+        public CarrinhoModelo comprarPD(CarrinhoModelo caMod)
+        {
+            try { 
+            string sql = "INSERT INTO carrinhocompras(data,uscode,cep) values (@data,@uscode,@cep)";
+            MySqlConnection conn = con.getConexao();
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@data", caMod);
+                cmd.Parameters.AddWithValue("@uscode", caMod);
+                cmd.Parameters.AddWithValue("@cep", caMod);
+                cmd.ExecuteNonQuery();
+                caMod.carrinhoCom = cmd.LastInsertedId;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return caMod;
+        }
     }
 }

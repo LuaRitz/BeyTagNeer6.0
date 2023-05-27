@@ -29,28 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comprar = new System.Windows.Forms.LinkLabel();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comprar);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(209, 287);
+            this.panel1.Size = new System.Drawing.Size(210, 290);
             this.panel1.TabIndex = 0;
-            // 
-            // comprar
-            // 
-            this.comprar.AutoSize = true;
-            this.comprar.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comprar.Location = new System.Drawing.Point(114, 233);
-            this.comprar.Name = "comprar";
-            this.comprar.Size = new System.Drawing.Size(74, 23);
-            this.comprar.TabIndex = 3;
-            this.comprar.TabStop = true;
-            this.comprar.Text = "Comprar";
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Form1
             // 
@@ -61,8 +48,6 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -70,6 +55,5 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.LinkLabel comprar;
     }
 }

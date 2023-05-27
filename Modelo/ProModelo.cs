@@ -21,7 +21,7 @@ namespace Modelo
             nomeproduto = "";
             stock = 0;
             preco = "0,00";
-            imagem = "//Fotos/default.png";
+            imagem = "//Fotos/Action_figures/default.png";
         }
 
         public int codProduto
