@@ -101,9 +101,9 @@ namespace Control
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@data", caMod);
-                cmd.Parameters.AddWithValue("@uscode", caMod);
-                cmd.Parameters.AddWithValue("@cep", caMod);
+                cmd.Parameters.AddWithValue("@data", caMod.dataT);
+                cmd.Parameters.AddWithValue("@uscode", caMod.usucode);
+                cmd.Parameters.AddWithValue("@cep", caMod.CepL);
                 cmd.ExecuteNonQuery();
                 caMod.carrinhoCom = cmd.LastInsertedId;
             }

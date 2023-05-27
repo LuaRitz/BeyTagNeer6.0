@@ -23,6 +23,7 @@ namespace BeyTagNeer
         Thread T5;
         UsuModelo usM = new UsuModelo();
         usucontroller usC = new usucontroller();
+        CarrinhoModelo caMod = new CarrinhoModelo();
         public TelaPri(UsuModelo us)
         {
             usM = us;
@@ -120,7 +121,7 @@ namespace BeyTagNeer
         }
         private void abrirC(object obj)
         {
-            Application.Run(new Carrinho(usM));
+            Application.Run(new Carrinho(usM, caMod));
         }
 
         private void cadastropd_Click(object sender, EventArgs e)

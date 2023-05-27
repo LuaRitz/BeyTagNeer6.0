@@ -18,6 +18,8 @@ namespace BeyTagNeer
     {
         Thread T3;
         UsuModelo usM = new UsuModelo();
+        CarrinhoModelo caMod = new CarrinhoModelo();
+        
         public Form1()
         {
             InitializeComponent();
@@ -64,15 +66,15 @@ namespace BeyTagNeer
                 panel1.Controls.Add(comprar);
             }
 
-            
-            
-        }
-        private void RegistrarClick(object sender, EventArgs e, string id)
-        {
-            ball();
         }
 
-        private void ball()
+
+        private void RegistrarClick(object sender, EventArgs e, string id)
+        {
+            ball(id);
+        }
+
+        private void ball(string id)
         {
             this.Close();
             T3 = new Thread(abrirC);
@@ -81,7 +83,7 @@ namespace BeyTagNeer
         }
     private void abrirC(object obj)
     {
-        Application.Run(new Carrinho(usM));
+        Application.Run(new Carrinho(usM, caMod));
     }
 
     private void panel1_Paint(object sender, PaintEventArgs e)
@@ -89,4 +91,5 @@ namespace BeyTagNeer
 
         }
     }
+  
 }
