@@ -82,6 +82,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="carcon.cs" />
     <Compile Include="conexao.cs" />
     <Compile Include="usucontroller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

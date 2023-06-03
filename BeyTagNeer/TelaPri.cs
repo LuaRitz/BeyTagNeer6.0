@@ -21,7 +21,6 @@ namespace BeyTagNeer
         Thread T2;
         Thread T3;
         Thread T4;
-        Thread T5;
         Thread T6;
         UsuModelo usM = new UsuModelo();
         usucontroller usC = new usucontroller();
