@@ -35,7 +35,6 @@
             this.Home = new System.Windows.Forms.Button();
             this.cadastrpd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -110,16 +109,6 @@
             this.label1.Text = "label1";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1196, 139);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
@@ -136,7 +125,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1283, 688);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cadastrpd);
             this.Controls.Add(this.Home);
@@ -162,7 +150,6 @@
         private System.Windows.Forms.Button Home;
         private System.Windows.Forms.Button cadastrpd;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
     }
 }

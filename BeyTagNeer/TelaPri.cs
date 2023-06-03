@@ -11,6 +11,7 @@ using System.Threading;
 using Control;
 using Modelo;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace BeyTagNeer
 {
@@ -48,12 +49,13 @@ namespace BeyTagNeer
             ProModelo usP = new ProModelo();
 
             produto = conn.ObterDados("SELECT * FROM produtos");
-
+            string path = Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory.ToString());
+            string new_dir = path + "\\Fotos\\Action_figure";
             int x = 0, y = 0;
             for (int i = 0; i < produto.Rows.Count; i++)
             {
-                Panel layout= new Panel();
-                layout.Size = new Size(210,290);
+                Panel layout = new Panel();
+                layout.Size = new Size(210, 290);
                 usP.codProduto = i;
                 usP.codProduto++;
                 DataRow row = produto.Rows[i];
@@ -71,14 +73,14 @@ namespace BeyTagNeer
                 foto.SizeMode = PictureBoxSizeMode.StretchImage;
                 foto.Size = new Size(210, 190);
                 foto.Location = new Point(0, 0);
-                foto.ImageLocation = row["imagem"].ToString();
+                foto.ImageLocation = new_dir + row["imagem"].ToString();
                 Button comprar = new Button();
                 comprar.Location = new Point(5, 255);
                 comprar.Size = new Size(200, 25);
                 comprar.Text = "Comprar";
                 comprar.Click += new EventHandler((sender1, e1) => RegistrarClick(sender1, e1, usP.codProduto.ToString()));
 
-                layout.Location=new Point(x, y);
+                layout.Location = new Point(x, y);
                 layout.Controls.Add(nomeprod);
                 layout.Controls.Add(preco);
                 layout.Controls.Add(foto);
@@ -158,19 +160,6 @@ namespace BeyTagNeer
         private void label1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void abrirf1(object obj)
-        {
-            Application.Run(new Form1());
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            T5 = new Thread(abrirf1);
-            T5.SetApartmentState(ApartmentState.STA);
-            T5.Start();
         }
 
         private void pictureBox_Click(object sender, EventArgs e)
