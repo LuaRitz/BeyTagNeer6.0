@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 27-Maio-2023 às 16:47
+-- Tempo de geração: 03-Jun-2023 às 14:00
 -- Versão do servidor: 10.4.19-MariaDB
 -- versão do PHP: 8.0.6
 
@@ -57,21 +57,21 @@ CREATE TABLE `produtos` (
 --
 
 INSERT INTO `produtos` (`produto`, `nomeproduto`, `imagem`, `Stock`, `preco`) VALUES
-(1, 'Alatreon', 'C:\\Users\\Aluno\\Documents\\GitHub\\BeyTagNeer6.0\\Fotos\\Action_figure\\Alatreon.jpg', 25, '499.00'),
-(2, 'Astalos', 'C:\\Users\\Aluno\\Documents\\GitHub\\BeyTagNeer6.0\\Fotos\\Action_figure\\Astalos.png', 25, '299.00'),
-(3, 'Brachydios', 'C:\\Users\\Aluno\\Documents\\GitHub\\BeyTagNeer6.0\\Fotos\\Action_figure\\Brachydios.jpg', 73, '435.00'),
-(4, 'Diablos', 'C:\\Users\\Aluno\\Documents\\GitHub\\BeyTagNeer6.0\\Fotos\\Action_figure\\Diablos.jpg', 32, '326.00'),
-(5, 'Fatalis', 'C:\\Users\\Aluno\\Documents\\GitHub\\BeyTagNeer6.0\\Fotos\\Action_figure\\Fatalis.jpg', 19, '678.00'),
-(6, 'Glavenus', 'C:\\Users\\Aluno\\Documents\\GitHub\\BeyTagNeer6.0\\Fotos\\Action_figure\\Glavenus.jpg', 65, '234.90'),
-(7, 'Lagiacrus', 'C:\\Users\\Aluno\\Documents\\GitHub\\BeyTagNeer6.0\\Fotos\\Action_figure\\Lagiacrus.jpg', 45, '294.90'),
-(8, 'Malfiestio', 'C:\\Users\\Aluno\\Documents\\GitHub\\BeyTagNeer6.0\\Fotos\\Action_figure\\Malfestio.jpg', 53, '394.90'),
-(9, 'Malzeno', 'C:\\Users\\Aluno\\Documents\\GitHub\\BeyTagNeer6.0\\Fotos\\Action_figure\\Malzeno.jpg', 42, '479.00'),
-(10, 'Mizutsune', 'C:\\Users\\Aluno\\Documents\\GitHub\\BeyTagNeer6.0\\Fotos\\Action_figure\\Mizutsune.jpg', 69, '690.00'),
-(11, 'Nargacuga', 'C:\\Users\\Aluno\\Documents\\GitHub\\BeyTagNeer6.0\\Fotos\\Action_figure\\Nargacuga.jpg', 44, '240.00'),
-(12, 'Odagaron', 'C:\\Users\\Aluno\\Documents\\GitHub\\BeyTagNeer6.0\\Fotos\\Action_figure\\Odagaron.jpg', 32, '420.00'),
-(13, 'SafiJiiva', 'C:\\Users\\Aluno\\Documents\\GitHub\\BeyTagNeer6.0\\Fotos\\Action_figure\\SafiJiiva.jpg', 63, '370.00'),
-(14, 'Tigrex', 'C:\\Users\\Aluno\\Documents\\GitHub\\BeyTagNeer6.0\\Fotos\\Action_figure\\Tigrex.jpg', 24, '470.00'),
-(15, 'Valstrax', 'C:\\Users\\Aluno\\Documents\\GitHub\\BeyTagNeer6.0\\Fotos\\Action_figure\\Valstrax.jpg', 41, '469.00');
+(1, 'Alatreon', '\\Alatreon.jpg', 25, '499.00'),
+(2, 'Astalos', '\\Astalos.png', 25, '299.00'),
+(3, 'Brachydios', '\\Brachydios.jpg', 73, '435.00'),
+(4, 'Diablos', '\\Diablos.jpg', 32, '326.00'),
+(5, 'Fatalis', '\\Fatalis.jpg', 19, '678.00'),
+(6, 'Glavenus', '\\Glavenus.jpg', 65, '234.90'),
+(7, 'Lagiacrus', '\\Lagiacrus.jpg', 45, '294.90'),
+(8, 'Malfiestio', '\\Malfestio.jpg', 53, '394.90'),
+(9, 'Malzeno', '\\Malzeno.jpg', 42, '479.00'),
+(10, 'Mizutsune', '\\Mizutsune.jpg', 69, '690.00'),
+(11, 'Nargacuga', '\\Nargacuga.jpg', 44, '240.00'),
+(12, 'Odagaron', '\\Odagaron.jpg', 32, '420.00'),
+(13, 'SafiJiiva', '\\SafiJiiva.jpg', 63, '370.00'),
+(14, 'Tigrex', '\\Tigrex.jpg', 24, '470.00'),
+(15, 'Valstrax', '\\Valstrax.jpg', 41, '469.00');
 
 -- --------------------------------------------------------
 
