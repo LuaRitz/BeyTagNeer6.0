@@ -112,6 +112,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Perfs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Perfs.Designer.cs">
+      <DependentUpon>Perfs.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaPri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Perfs.resx">
+      <DependentUpon>Perfs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaPri.resx">
       <DependentUpon>TelaPri.cs</DependentUpon>

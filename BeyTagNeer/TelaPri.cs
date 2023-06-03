@@ -21,6 +21,7 @@ namespace BeyTagNeer
         Thread T3;
         Thread T4;
         Thread T5;
+        Thread T6;
         UsuModelo usM = new UsuModelo();
         usucontroller usC = new usucontroller();
         CarrinhoModelo caMod = new CarrinhoModelo();
@@ -170,6 +171,18 @@ namespace BeyTagNeer
             T5 = new Thread(abrirf1);
             T5.SetApartmentState(ApartmentState.STA);
             T5.Start();
+        }
+
+        private void pictureBox_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            T6 = new Thread(abrirPerf);
+            T6.SetApartmentState(ApartmentState.STA);
+            T6.Start();
+        }
+        private void abrirPerf(object obj)
+        {
+            Application.Run(new Perfs(usM));
         }
     }
 }

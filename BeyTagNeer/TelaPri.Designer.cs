@@ -62,6 +62,7 @@
             this.pictureBox.Size = new System.Drawing.Size(114, 98);
             this.pictureBox.TabIndex = 5;
             this.pictureBox.TabStop = false;
+            this.pictureBox.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // carrinho
             // 

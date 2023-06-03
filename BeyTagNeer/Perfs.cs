@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace BeyTagNeer
 {
-    public partial class Carrinho : Form
+    public partial class Perfs : Form
     {
         Thread T2;
         Thread T3;
@@ -21,15 +21,28 @@ namespace BeyTagNeer
         UsuModelo usM = new UsuModelo();
         usucontroller usC = new usucontroller();
         CarrinhoModelo caMod = new CarrinhoModelo();
-        public Carrinho(UsuModelo us)
+        public Perfs(UsuModelo us)
         {
             usM = us;
             InitializeComponent();
         }
 
-        private void Carrinho_Load(object sender, EventArgs e)
+        private void Perfs_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(caMod.carrinhoCom.ToString());
+
+            
+        }
+
+        private void pictureBox_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            T6 = new Thread(abrirPerf);
+            T6.SetApartmentState(ApartmentState.STA);
+            T6.Start();
+        }
+        private void abrirPerf(object obj)
+        {
+            Application.Run(new Perfs(usM));
         }
 
         private void Home_Click(object sender, EventArgs e)
@@ -44,7 +57,7 @@ namespace BeyTagNeer
             Application.Run(new TelaPri(usM));
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void carrinho_Click(object sender, EventArgs e)
         {
             this.Close();
             T3 = new Thread(abrirC);
@@ -54,18 +67,6 @@ namespace BeyTagNeer
         private void abrirC(object obj)
         {
             Application.Run(new Carrinho(usM));
-        }
-
-        private void pictureBox_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            T6 = new Thread(abrirPerf);
-            T6.SetApartmentState(ApartmentState.STA);
-            T6.Start();
-        }
-        private void abrirPerf(object obj)
-        {
-            Application.Run(new Perfs(usM));
         }
     }
 }
