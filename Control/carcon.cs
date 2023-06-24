@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Modelo;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Math.EC.Multiplier;
 
 namespace Control
 {
@@ -17,6 +18,7 @@ namespace Control
         UsuModelo usM = new UsuModelo();
         CarrinhoModelo ca = new CarrinhoModelo();
         conexao con = new conexao();
+        int prodselect;
         public carcon()
         {
             prdinfo(pM);
@@ -65,7 +67,16 @@ namespace Control
 
         produto = conn.ObterDados("SELECT * FROM produtos");
     }
-    }
+        public void calc(ProModelo proMod)
+        {
+            DataTable produto = new DataTable();
+            produto = con.ObterDados("SELECT * FROM produtos WHERE produto =" +prodselect+ "");
+            for (int i = prodselect; produto.Rows;) { 
+            DataRow row = produto.Rows[i];
+                decimal total =+ Convert.ToDecimal(row["preco"]);
+          }
+        }
+ }
 
    
 }
