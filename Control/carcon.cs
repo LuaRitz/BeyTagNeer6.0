@@ -13,12 +13,13 @@ namespace Control
 {
     public class carcon
     {
+        ProModelo pM = new ProModelo();
         UsuModelo usM = new UsuModelo();
         CarrinhoModelo ca = new CarrinhoModelo();
         conexao con = new conexao();
         public carcon()
         {
-
+            prdinfo(pM);
         }
         public int criaca(CarrinhoModelo model, UsuModelo uss)
         {
@@ -57,11 +58,16 @@ namespace Control
             }
             return carrinho;
         }
+ public void prdinfo(ProModelo pMod)
+    {
+        DataTable produto = new DataTable();
+        conexao conn = new conexao();
 
-
-
-
+        produto = conn.ObterDados("SELECT * FROM produtos");
     }
+    }
+
+   
 }
 
             
