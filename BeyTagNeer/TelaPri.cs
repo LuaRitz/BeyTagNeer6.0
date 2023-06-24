@@ -77,8 +77,9 @@ namespace BeyTagNeer
                 comprar.Location = new Point(5, 255);
                 comprar.Size = new Size(200, 25);
                 comprar.Text = "Comprar";
-                comprar.Click += new EventHandler((sender1, e1) => RegistrarClick(sender1, e1, usP.codProduto.ToString()));
-
+                usP.codProduto = Convert.ToInt32(row["produto"]);
+                string prodd = Convert.ToString(i);
+                comprar.Click += new EventHandler((sender1, e1) => RegistrarClick(sender1, e1, usP.codProduto.ToString(prodd)));
                 layout.Location = new Point(x, y);
                 layout.Controls.Add(nomeprod);
                 layout.Controls.Add(preco);
@@ -91,18 +92,21 @@ namespace BeyTagNeer
                     y += 290;
                     x = 0;
                 }
+                
                 panel1.Controls.Add(layout);
             }
 
         }
         private void RegistrarClick(object sender, EventArgs e, string id)
         {
+            carcon.prodselect(Convert.ToInt32(id));
             ball(id);
         }
 
         private void ball(string id)
         {
             this.Close();
+
             T3 = new Thread(abrirC);
             T3.SetApartmentState(ApartmentState.STA);
             T3.Start();

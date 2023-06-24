@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO.Pipes;
 using System.Linq;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
@@ -18,10 +19,12 @@ namespace Control
         UsuModelo usM = new UsuModelo();
         CarrinhoModelo ca = new CarrinhoModelo();
         conexao con = new conexao();
-        int prodselect;
+        
+        public static int proselect;
         public carcon()
         {
             prdinfo(pM);
+            
         }
         public int criaca(CarrinhoModelo model, UsuModelo uss)
         {
@@ -70,11 +73,16 @@ namespace Control
         public void calc(ProModelo proMod)
         {
             DataTable produto = new DataTable();
-            produto = con.ObterDados("SELECT * FROM produtos WHERE produto =" +prodselect+ "");
-            for (int i = prodselect; produto.Rows;) { 
+            produto = con.ObterDados("SELECT * FROM produtos WHERE produto =" +proselect+ "");
+            for (int i = proselect;i < produto.Rows.Count; i++) { 
             DataRow row = produto.Rows[i];
                 decimal total =+ Convert.ToDecimal(row["preco"]);
           }
+        }
+        public static void prodselect(int id)
+        {
+            proselect = id;
+            
         }
  }
 
