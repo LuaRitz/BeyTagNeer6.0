@@ -21,10 +21,13 @@ namespace BeyTagNeer
         UsuModelo usM = new UsuModelo();
         usucontroller usC = new usucontroller();
         CarrinhoModelo caMod = new CarrinhoModelo();
+        ProModelo proMod = new ProModelo();
+        carcon cac = new carcon();
         public Carrinho(UsuModelo us)
         {
             usM = us;
             InitializeComponent();
+            cac.prdinfo(proMod);
         }
 
         private void Carrinho_Load(object sender, EventArgs e)
