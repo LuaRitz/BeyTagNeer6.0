@@ -66,10 +66,10 @@ namespace BeyTagNeer
             }
             else
             {
-                string.Format("{0:C}", Convert.ToDecimal(preco.Text.Replace(".", ",")));
+                //string.Format("{0:C}", Convert.ToDecimal(preco.Text.Replace(".", ",")));
                 pMod.Stock = Convert.ToInt32(stock.Text);
                 pMod.NomePro = nomepro.Text;
-                pMod.Preco = preco.Text;
+                pMod.Preco = Convert.ToDecimal(preco.Text);
                 pMod.Imagem = fotoptxt.Text;
                 if (usC.cadastrarP(pMod) == 1)
                 {

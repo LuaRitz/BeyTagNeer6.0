@@ -102,7 +102,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1065, 180);
+            this.label1.Location = new System.Drawing.Point(1147, 168);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 25;
@@ -112,9 +112,9 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Location = new System.Drawing.Point(252, 139);
+            this.panel1.Location = new System.Drawing.Point(218, 140);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(807, 521);
+            this.panel1.Size = new System.Drawing.Size(875, 521);
             this.panel1.TabIndex = 27;
             // 
             // TelaPri
