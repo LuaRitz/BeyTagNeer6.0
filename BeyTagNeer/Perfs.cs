@@ -33,6 +33,7 @@ namespace BeyTagNeer
             nometxt.Text = usM.NomeUsu;
             emailtxt.Text = usM.Email;
             login.Text = usM.Login;
+            pictureBox1.Text = usM.Imagem;
             perf.Text = Convert.ToString(usM.perfil);
             
         }
