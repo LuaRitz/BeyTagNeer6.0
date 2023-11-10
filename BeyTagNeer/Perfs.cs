@@ -29,11 +29,12 @@ namespace BeyTagNeer
 
         private void Perfs_Load(object sender, EventArgs e)
         {
+            pictureBox.Load(usM.Imagem);
             conexao conn = new conexao();
             nometxt.Text = usM.NomeUsu;
             emailtxt.Text = usM.Email;
             login.Text = usM.Login;
-            pictureBox1.Text = usM.Imagem;
+            pictureBox1.Load(usM.Imagem);
             perf.Text = Convert.ToString(usM.perfil);
             
         }

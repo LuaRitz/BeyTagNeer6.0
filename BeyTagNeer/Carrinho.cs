@@ -28,6 +28,10 @@ namespace BeyTagNeer
             usM = us;
             InitializeComponent();
             cac.prdinfo(proMod);
+            if(usM.codUsuario != 0)
+            {
+                pictureBox.Load(usM.Imagem);
+            }
         }
 
         private void Carrinho_Load(object sender, EventArgs e)

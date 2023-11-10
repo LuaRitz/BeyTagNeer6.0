@@ -29,6 +29,10 @@ namespace BeyTagNeer
         {
             usM = us;
             InitializeComponent();
+            if (usM.codUsuario != 0)
+            {
+                pictureBox.Load(usM.Imagem);
+            }
         }
         
 
