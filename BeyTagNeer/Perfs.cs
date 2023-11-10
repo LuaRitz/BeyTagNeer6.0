@@ -29,7 +29,11 @@ namespace BeyTagNeer
 
         private void Perfs_Load(object sender, EventArgs e)
         {
-
+            conexao conn = new conexao();
+            nometxt.Text = usM.NomeUsu;
+            emailtxt.Text = usM.Email;
+            login.Text = usM.Login;
+            perf.Text = Convert.ToString(usM.perfil);
             
         }
 
