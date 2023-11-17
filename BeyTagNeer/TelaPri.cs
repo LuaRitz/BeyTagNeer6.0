@@ -12,6 +12,7 @@ using Control;
 using Modelo;
 using MySql.Data.MySqlClient;
 using System.IO;
+using System.Xml.Linq;
 
 namespace BeyTagNeer
 {
@@ -27,6 +28,7 @@ namespace BeyTagNeer
         CarrinhoModelo caMod = new CarrinhoModelo();
         public TelaPri(UsuModelo us)
         {
+
             usM = us;
             InitializeComponent();
             if (usM.codUsuario != 0)
@@ -38,6 +40,7 @@ namespace BeyTagNeer
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            flmov();
             label1.Text = usM.Usuario.ToString();
             if (usM.perfil == 2)
             {
@@ -101,6 +104,27 @@ namespace BeyTagNeer
             }
 
         }
+
+        public static void flmov()
+        {
+            
+            DirectoryInfo diSource = new DirectoryInfo(@"C:\Users\aluno\Documents\GitHub\BeyTagNeer6.0\Fotos\Action_figure");
+            DirectoryInfo diTarget = new DirectoryInfo(@"C:\Users\aluno\Documents\GitHub\BeyTagNeer6.0\BeyTagNeer\bin\Debug\Fotos\Action_figure");
+            Copiar(diSource, diTarget);
+        }
+
+        public static void Copiar(DirectoryInfo source, DirectoryInfo target)
+        {
+            if (Directory.Exists(target.FullName) == false)
+            {
+                Directory.CreateDirectory(target.FullName);
+            }
+            foreach (FileInfo fi in source.GetFiles())
+            {
+                fi.CopyTo(Path.Combine(target.ToString(), fi.Name), true);
+            }
+        }
+
         private void RegistrarClick(object sender, EventArgs e, string id)
         {
             carcon.prodselect(Convert.ToInt32(id));
