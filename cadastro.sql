@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 03-Jun-2023 às 14:00
--- Versão do servidor: 10.4.19-MariaDB
--- versão do PHP: 8.0.6
+-- Tempo de geração: 17-Nov-2023 às 23:32
+-- Versão do servidor: 10.4.24-MariaDB
+-- versão do PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `cadastro`
 --
-CREATE DATABASE IF NOT EXISTS `cadastro` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `cadastro`;
 
 -- --------------------------------------------------------
 
@@ -29,7 +27,6 @@ USE `cadastro`;
 -- Estrutura da tabela `carrinhocompras`
 --
 
-DROP TABLE IF EXISTS `carrinhocompras`;
 CREATE TABLE `carrinhocompras` (
   `carrinho` int(8) NOT NULL,
   `data` datetime NOT NULL,
@@ -43,7 +40,6 @@ CREATE TABLE `carrinhocompras` (
 -- Estrutura da tabela `produtos`
 --
 
-DROP TABLE IF EXISTS `produtos`;
 CREATE TABLE `produtos` (
   `produto` int(2) NOT NULL,
   `nomeproduto` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -57,21 +53,21 @@ CREATE TABLE `produtos` (
 --
 
 INSERT INTO `produtos` (`produto`, `nomeproduto`, `imagem`, `Stock`, `preco`) VALUES
-(1, 'Alatreon', '\\Alatreon.jpg', 25, '499.00'),
+(1, 'Alatreon', '\\Alatreon.jpg', 25, '399.99'),
 (2, 'Astalos', '\\Astalos.png', 25, '299.00'),
-(3, 'Brachydios', '\\Brachydios.jpg', 73, '435.00'),
+(3, 'Brachydios', '\\Brachydios.jpg', 73, '439.59'),
 (4, 'Diablos', '\\Diablos.jpg', 32, '326.00'),
 (5, 'Fatalis', '\\Fatalis.jpg', 19, '678.00'),
 (6, 'Glavenus', '\\Glavenus.jpg', 65, '234.90'),
 (7, 'Lagiacrus', '\\Lagiacrus.jpg', 45, '294.90'),
 (8, 'Malfiestio', '\\Malfestio.jpg', 53, '394.90'),
-(9, 'Malzeno', '\\Malzeno.jpg', 42, '479.00'),
-(10, 'Mizutsune', '\\Mizutsune.jpg', 69, '690.00'),
-(11, 'Nargacuga', '\\Nargacuga.jpg', 44, '240.00'),
+(9, 'Malzeno', '\\Malzeno.jpg', 42, '479.99'),
+(10, 'Mizutsune', '\\Mizutsune.jpg', 69, '376.69'),
+(11, 'Nargacuga', '\\Nargacuga.jpg', 44, '239.99'),
 (12, 'Odagaron', '\\Odagaron.jpg', 32, '420.00'),
 (13, 'SafiJiiva', '\\SafiJiiva.jpg', 63, '370.00'),
-(14, 'Tigrex', '\\Tigrex.jpg', 24, '470.00'),
-(15, 'Valstrax', '\\Valstrax.jpg', 41, '469.00');
+(14, 'Tigrex', '\\Tigrex.jpg', 24, '470.49'),
+(15, 'Valstrax', '\\Valstrax.jpg', 41, '469.39');
 
 -- --------------------------------------------------------
 
@@ -79,7 +75,6 @@ INSERT INTO `produtos` (`produto`, `nomeproduto`, `imagem`, `Stock`, `preco`) VA
 -- Estrutura da tabela `usuario`
 --
 
-DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
   `usercode` int(8) NOT NULL,
   `nome` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
