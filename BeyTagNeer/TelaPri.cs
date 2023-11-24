@@ -33,7 +33,9 @@ namespace BeyTagNeer
             InitializeComponent();
             if (usM.codUsuario != 0)
             {
+                if(usM.Imagem != null) { 
                 pictureBox.Load(usM.Imagem);
+                }
             }
         }
         
@@ -107,7 +109,8 @@ namespace BeyTagNeer
 
         public static void flmov()
         {
-            
+            Directory.CreateDirectory("C:\\Users\\aluno\\Documents\\GitHub\\BeyTagNeer6.0\\BeyTagNeer\\bin\\Debug\\Fotos\\Action_figure");
+
             DirectoryInfo diSource = new DirectoryInfo(@"C:\Users\aluno\Documents\GitHub\BeyTagNeer6.0\Fotos\Action_figure");
             DirectoryInfo diTarget = new DirectoryInfo(@"C:\Users\aluno\Documents\GitHub\BeyTagNeer6.0\BeyTagNeer\bin\Debug\Fotos\Action_figure");
             Copiar(diSource, diTarget);
