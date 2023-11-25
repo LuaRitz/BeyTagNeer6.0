@@ -33,7 +33,7 @@ namespace BeyTagNeer
             InitializeComponent();
             if (usM.codUsuario != 0)
             {
-                if(usM.Imagem != null) { 
+                if(usM.Imagem != "") { 
                 pictureBox.Load(usM.Imagem);
                 }
             }
