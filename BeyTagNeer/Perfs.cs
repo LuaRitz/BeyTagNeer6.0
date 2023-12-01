@@ -1,6 +1,7 @@
 ﻿using Control;
 using Modelo;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,11 @@ namespace BeyTagNeer
 
         private void Perfs_Load(object sender, EventArgs e)
         {
+            if (usM.perfil == 2)
+            {
+                perf.Visible = true;
+                label7.Visible = true;
+            }
             if (usM.codUsuario != 0)
             {
                 if (usM.Imagem != "")
@@ -88,6 +94,7 @@ namespace BeyTagNeer
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (senat.Text == usM.Senha) { 
             usM.NomeUsu = nometxt.Text;
             usM.Email = emailtxt.Text;
             usM.Login = login.Text;
@@ -95,6 +102,31 @@ namespace BeyTagNeer
             usM.Imagem = pictureBox1.Text;
             usC.editar(usM);
             MessageBox.Show("sucesso");
+            }
+            else
+            {
+                MessageBox.Show("INFORME A SENHA PARA ALTERAR OS DADOS!");
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog open = new OpenFileDialog();
+                open.Filter = "image file (*.jpg;*.png) | *.png; *.jpg;";
+                string caminhofoto = @"/Fotos";
+                if (open.ShowDialog() == DialogResult.OK)
+                {
+                    pictureBox1.Text = open.FileName;
+                    pictureBox1.Image = Image.FromFile(open.FileName);
+                }
+                File.Copy(open.FileName, caminhofoto);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha" + ex.Message);
+            }
         }
     }
 }
