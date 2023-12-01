@@ -29,12 +29,17 @@ namespace BeyTagNeer
 
         private void Perfs_Load(object sender, EventArgs e)
         {
-            pictureBox.Load(usM.Imagem);
+            if (usM.codUsuario != 0)
+            {
+                if (usM.Imagem != "")
+                {
+                    pictureBox1.Load(usM.Imagem);
+                }
+            }
             conexao conn = new conexao();
             nometxt.Text = usM.NomeUsu;
             emailtxt.Text = usM.Email;
             login.Text = usM.Login;
-            pictureBox1.Load(usM.Imagem);
             perf.Text = Convert.ToString(usM.perfil);
             
         }
@@ -73,6 +78,11 @@ namespace BeyTagNeer
         private void abrirC(object obj)
         {
             Application.Run(new Carrinho(usM));
+        }
+
+        private void dele_Click(object sender, EventArgs e)
+        {
+            usC.excluir(usM);
         }
     }
 }

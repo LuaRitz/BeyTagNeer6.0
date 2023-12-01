@@ -97,6 +97,21 @@ namespace Control
                     throw new Exception(ex.Message);        
                 }
         }
+        public bool excluir(UsuModelo usM)
+        {
+            bool result = false;
+            string sql = "DELETE FROM usuario where usercode=" + usM.codUsuario;
+            //chamando minha conexao
+            MySqlConnection sqlCon = con.getConexao();
+            sqlCon.Open();//abrindo o banco
+            MySqlCommand cmd = new MySqlCommand(sql, sqlCon);
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = sql;
+            if (cmd.ExecuteNonQuery() >= 1)
+                result = true;
+            sqlCon.Close();
+            return result;
+        }
         public CarrinhoModelo comprarPD(CarrinhoModelo caMod)
         {
             try { 
