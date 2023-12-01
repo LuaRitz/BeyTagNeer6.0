@@ -11,7 +11,7 @@ namespace Modelo
         private int codigoproduto;
         private string nomeproduto;
         private int stock;
-        private decimal preco;
+        private string preco;
         private string imagem;
 
 
@@ -20,7 +20,7 @@ namespace Modelo
             codigoproduto = 0;
             nomeproduto = "";
             stock = 0;
-            preco = 0;
+            preco = "0,00";
             imagem = "//Fotos/Action_figures/default.png";
         }
 
@@ -39,7 +39,7 @@ namespace Modelo
             get { return stock; }
             set { stock = value; }
         }
-        public decimal Preco
+        public string Preco
         {
             get { return preco; }
             set { preco = value; }

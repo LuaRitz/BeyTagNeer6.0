@@ -30,7 +30,10 @@ namespace BeyTagNeer
             cac.prdinfo(proMod);
             if(usM.codUsuario != 0)
             {
-                pictureBox.Load(usM.Imagem);
+                if (usM.Imagem != "")
+                {
+                    pictureBox.Load(usM.Imagem);
+                }
             }
         }
 
