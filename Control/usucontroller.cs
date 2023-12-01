@@ -112,6 +112,29 @@ namespace Control
             sqlCon.Close();
             return result;
         }
+
+        public bool editar(UsuModelo usM)
+        {
+            bool result = false;
+            string sql = "UPDATE usuario set nome=@nome, email=@email, login=@login, perfil=@perfil where usercode=" +usM.codUsuario+"";
+            MySqlConnection sqlcon = con.getConexao();
+            sqlcon.Open();
+            MySqlCommand command = new MySqlCommand(sql, sqlcon);
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = sql;
+            command.Parameters.AddWithValue("nome", usM.NomeUsu);
+            command.Parameters.AddWithValue("email", usM.Email);
+            command.Parameters.AddWithValue("login", usM.Login);
+            command.Parameters.AddWithValue("perfil", usM.perfil);
+            if (usM.Imagem != "") { 
+            command.Parameters.AddWithValue("imagem", usM.Imagem);
+            }
+            if (command.ExecuteNonQuery() >= 1)
+                result = true;
+            sqlcon.Close();
+            return result;
+        }
+
         public CarrinhoModelo comprarPD(CarrinhoModelo caMod)
         {
             try { 

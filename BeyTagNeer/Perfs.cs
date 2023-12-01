@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace BeyTagNeer
 {
@@ -83,6 +84,17 @@ namespace BeyTagNeer
         private void dele_Click(object sender, EventArgs e)
         {
             usC.excluir(usM);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            usM.NomeUsu = nometxt.Text;
+            usM.Email = emailtxt.Text;
+            usM.Login = login.Text;
+            usM.perfil = Convert.ToInt32(perf.Text);
+            usM.Imagem = pictureBox1.Text;
+            usC.editar(usM);
+            MessageBox.Show("sucesso");
         }
     }
 }
