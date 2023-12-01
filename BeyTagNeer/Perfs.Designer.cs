@@ -213,6 +213,7 @@
             // 
             this.nsen2.Location = new System.Drawing.Point(404, 88);
             this.nsen2.Name = "nsen2";
+            this.nsen2.PasswordChar = '*';
             this.nsen2.Size = new System.Drawing.Size(131, 20);
             this.nsen2.TabIndex = 5;
             // 
@@ -220,6 +221,7 @@
             // 
             this.sen.Location = new System.Drawing.Point(404, 36);
             this.sen.Name = "sen";
+            this.sen.PasswordChar = '*';
             this.sen.Size = new System.Drawing.Size(131, 20);
             this.sen.TabIndex = 4;
             // 
@@ -264,6 +266,7 @@
             // 
             this.senat.Location = new System.Drawing.Point(78, 133);
             this.senat.Name = "senat";
+            this.senat.PasswordChar = '*';
             this.senat.Size = new System.Drawing.Size(184, 20);
             this.senat.TabIndex = 15;
             // 
